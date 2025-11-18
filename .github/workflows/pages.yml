@@ -1,4 +1,4 @@
-name: Build and deploy to GitHub Pages
+name: Build and deploy Weather-App to GitHub Pages
 
 on:
   push:
@@ -28,7 +28,6 @@ jobs:
       - name: Build
         env:
           VITE_WEATHER_API_KEY: ${{ secrets.VITE_WEATHER_API_KEY }}
-          VITE_WEATHER_API_URL: ${{ secrets.VITE_WEATHER_API_URL }}
         run: npm run build
 
       - name: Upload artifact for GitHub Pages
