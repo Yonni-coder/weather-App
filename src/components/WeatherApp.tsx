@@ -17,6 +17,7 @@ export default function WeatherApp() {
         try {
             const request = await fetch(`${ WEATHER_API_URL}&key=${WEATHER_API_KEY}&q=${city}`)
             const json = await request.json()
+            console.log(json)
             setTimeout(() => {
                 setWeather(json)
             }, 2000)

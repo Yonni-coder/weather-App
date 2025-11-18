@@ -1,4 +1,4 @@
-import React from 'react'
+import CityClock from './CityClock.jsx'
 
 export default function WeatherInfo({ weather, zoom = 10 }) {
   const lat = weather?.location?.lat
@@ -30,6 +30,11 @@ export default function WeatherInfo({ weather, zoom = 10 }) {
               <p className="text-sm text-slate-500 dark:text-slate-400">
                 {weather?.location?.country}
               </p>
+
+              <CityClock
+              tz={weather?.location?.tz_id}
+              epochMs={weather?.location?.localtime_epoch ? weather.location.localtime_epoch * 1000 : undefined}
+              />
 
               <div className="mt-2 flex items-baseline gap-3">
                 <span className="text-4xl font-bold text-slate-900 dark:text-white">
