@@ -31,7 +31,6 @@ aria-label="Ville"
 />
 </div>
 
-
 <button
 type="submit"
 className="inline-flex items-center gap-2 bg-sky-600 hover:bg-sky-700 text-white text-sm font-medium px-4 py-2 rounded-md shadow focus:outline-none focus:ring-2 focus:ring-sky-300 transition"
