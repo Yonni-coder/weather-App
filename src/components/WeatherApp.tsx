@@ -6,7 +6,7 @@ const WEATHER_API_KEY = import.meta.env.VITE_WEATHER_API_KEY
 if (!WEATHER_API_KEY) {
     throw new Error('No API key provided. Please set VITE_WEATHER_API_KEY in your environment variables.')
 }
-const WEATHER_API_URL = 'http://api.weatherapi.com/v1/current.json?aqi=no'
+const WEATHER_API_URL = 'https://api.weatherapi.com/v1/current.json?aqi=no'
 export default function WeatherApp() {
     const [weather, setWeather] = useState(null)
     useEffect(()=>{
